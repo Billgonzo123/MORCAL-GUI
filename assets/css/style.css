@@ -1,0 +1,31 @@
+header {
+    background-color: rgb(140, 177, 199);
+    border: 5px rgb(112, 129, 129) solid;
+    margin-bottom: 20px;
+}
+
+header h1{
+    text-align: center;
+}
+
+form {
+    padding:30px 0px;
+    background-color: cornflowerblue;
+}
+form  lable{
+    display:block;
+    text-decoration:underline;
+    font-weight:bold;
+    font-size: 20px;
+    margin:10px 0;
+}
+
+form input{
+    margin-left: 100px;
+}
+
+button {
+    color:darkgreen;
+    font-size: 30px;
+    padding: 10px 50px;
+}
