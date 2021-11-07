@@ -29,3 +29,9 @@ button {
     font-size: 30px;
     padding: 10px 50px;
 }
+
+#results {
+    background-color:rgb(118, 209, 197);
+    font-size: 20px;
+    padding: 10px 50px;
+}

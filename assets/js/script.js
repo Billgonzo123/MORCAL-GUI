@@ -4,7 +4,7 @@
     var APR = document.getElementsByName("APR") [0].value; //ask for apr from user
     var DEBT = document.getElementsByName("DEBT") [0].value; //ask for total debt from user
     var YEARS = document.getElementsByName("YEARS") [0].value; //ask for total years from user
-
+    var result=document.getElementById('results');
 
     var DEBTS=DEBT; //crate a second debt value as a constant - aka inital debt
     var TOTALINT=0;
@@ -16,7 +16,7 @@
     var FULL=0; //this will hold the calculated total monthly paymnet [intrest+princ]
     var TOTALMONTHLY=0; //accumulated total payments
 
-    document.write ('--------------------<br>',YEARS,' Year Fixed Mortgage at ',(APR*100),'% APR<br>Total Debt: $',DEBT,'<br>Principal Monthly Payment: $',PRINC,'<br>--------------------');
+    result.innerHTML += '<br>--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>';
 
 //Calculation Loop//
     while (TIMER!=MONTHS+1)
@@ -29,14 +29,16 @@
         DEBT=Math.round(DEBT-PRINC);   //calulate new debt by subtracting principal payment from debt
 
         //Print Results
-        document.write ('<br>Year: ', YEAR);
-        document.write ('<br>Month: ', TIMER-(12*YEAR)+12); //calculates the month of year based
-        document.write ('<br>Intrest: $', PAYMENT);
-        document.write ('<br>Principle: $', PRINC)
-        document.write ('<br>Total Payment: $', FULL);
-        document.write ('<br>Remaining Debt: $',  DEBT);
-        document.write ('<br>Total Months: ', TIMER);
-        document.write ('<br>------------------------');
+        result.innerHTML +=  '<br>Year: '+ YEAR;
+        result.innerHTML +=  '<br>Month: '+ (TIMER-(12*YEAR)+12); //calculates the month of year based
+        result.innerHTML +=  '<br>Intrest: $'+ PAYMENT;
+        result.innerHTML +=  '<br>Principle: $'+ PRINC;
+        result.innerHTML +=  '<br>Total Payment: $'+ FULL;
+        result.innerHTML +=  '<br>Remaining Debt: $'+  DEBT;
+        result.innerHTML +=  '<br>Total Months: '+ TIMER;
+        result.innerHTML +=  '<br>------------------------';
+
+
         //prepar for next loop
         TOTALMONTHLY +=FULL //add payment to total paymnets
         TOTALINT=Math.round(TOTALINT+PAYMENT)
