@@ -45,7 +45,7 @@ button {
     position:relative;
     transform: translateX(-50%); /*sets x position to center*/
     border:black solid 5px;
-    height:350px;
+    height:680px;
     width:400px;
     background-color:rgb(118, 209, 197);
     font-size: 20px;

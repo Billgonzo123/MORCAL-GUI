@@ -57,6 +57,7 @@
         TIMER +=1 //add 1 to TIMER to increment month
     }
     button.innerHTML="Calculate"; /*set button text back to normal*/
+    result.scrollIntoView({behavior: "smooth"}); /*this scrolls to the results and does it smoothly. This doesnt work in Safari*/
     
 }
 
