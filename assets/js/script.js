@@ -16,6 +16,8 @@
     var FULL=0; //this will hold the calculated total monthly paymnet [intrest+princ]
     var TOTALMONTHLY=0; //accumulated total payments
 
+    result.innerHTML="";//clear the results elelment
+
     result.innerHTML += '<br>--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>';
 
 //Calculation Loop//
