@@ -17,7 +17,7 @@ header h1{
 }
 form {
     position:relative;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*sets x position to center*/
     border:black solid 5px;
     height:200px;
     width:400px;
@@ -32,13 +32,9 @@ form  lable{
     margin:10px 0;
 }
 
-form input{
-
-}
-
 button {
-    display:flex;
-    transform: translateX(-50%);
+    display:flex; /*centers the button on the page*/
+    transform: translateX(-50%); /*sets x position to center*/
     margin-top: 25px;
     color:darkgreen;
     font-size: 30px;
@@ -47,12 +43,12 @@ button {
 
 #results {
     position:relative;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*sets x position to center*/
     border:black solid 5px;
-    height:325px;
+    height:350px;
     width:400px;
     background-color:rgb(118, 209, 197);
     font-size: 20px;
     padding: 10px 50px;
-    overflow-y:auto;
+    overflow-y:scroll; /*allows scrolling when too much text*/
 }

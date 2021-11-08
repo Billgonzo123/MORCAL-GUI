@@ -1,6 +1,16 @@
 
+    var button = document.getElementById("CAL");
+
+
+ function BUTTON_CLICK(){
+
+    button.innerHTML="Loading...."; 
+ }
+
  function RUN_CAL()
-{
+{   
+    
+   
     var APR = document.getElementsByName("APR") [0].value; //ask for apr from user
     var DEBT = document.getElementsByName("DEBT") [0].value; //ask for total debt from user
     var YEARS = document.getElementsByName("YEARS") [0].value; //ask for total years from user
@@ -19,7 +29,7 @@
     result.innerHTML="";//clear the results elelment
 
     result.innerHTML += '--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100).toPrecision(5)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>'; //.toPrecision() sets the number of dec points to display
-
+    
 //Calculation Loop//
     while (TIMER!=MONTHS+1)
     { //while the currentmonth [TIMER] does not equal the total number of months [MONTHS], do the loop (a 1 is added so that month 1 = 1 and not 0)
@@ -46,5 +56,7 @@
         TOTALINT=Math.round(TOTALINT+PAYMENT)
         TIMER +=1 //add 1 to TIMER to increment month
     }
+    button.innerHTML="Calculate"; /*set button text back to normal*/
+    
 }
 
