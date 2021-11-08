@@ -31,7 +31,11 @@ button {
 }
 
 #results {
+    border:black solid 5px;
+    height:325px;
+    width:400px;
     background-color:rgb(118, 209, 197);
     font-size: 20px;
     padding: 10px 50px;
+    overflow-y:auto
 }

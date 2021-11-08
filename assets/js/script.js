@@ -18,7 +18,7 @@
 
     result.innerHTML="";//clear the results elelment
 
-    result.innerHTML += '<br>--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>';
+    result.innerHTML += '--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100).toPrecision(5)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>'; //.toPrecision() sets the number of dec points to display
 
 //Calculation Loop//
     while (TIMER!=MONTHS+1)
