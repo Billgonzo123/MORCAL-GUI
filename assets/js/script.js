@@ -24,7 +24,7 @@
     var YEAR=(TIMER/12); //holds value for the year based of the current month
     var PRINC=Math.round(DEBT/YEARS/12); //constant, monthly principal payment
     var FULL=0; //this will hold the calculated total monthly paymnet [intrest+princ]
-    var TOTALMONTHLY=0; //accumulated total payments
+    var GRANDTOTAL=0; //accumulated total payments
 
     result.innerHTML="";//clear the results elelment
 
@@ -39,6 +39,7 @@
         if (DEBT<PRINC) {PRINC=DEBT}; //if your debt is less than the principle, change princ val to debt value
         FULL = Math.round(PAYMENT+PRINC);  //calculate total payment
         DEBT=Math.round(DEBT-PRINC);   //calulate new debt by subtracting principal payment from debt
+        GRANDTOTAL +=FULL //add payment to total paymnets
 
         //Print Results
         result.innerHTML +=  '<br>Year: '+ YEAR;
@@ -48,11 +49,12 @@
         result.innerHTML +=  '<br>Total Payment: $'+ FULL;
         result.innerHTML +=  '<br>Remaining Debt: $'+  DEBT;
         result.innerHTML +=  '<br>Total Months: '+ TIMER;
+        result.innerHTML +=  '<br>Grand Total: '+ GRANDTOTAL;
         result.innerHTML +=  '<br>------------------------';
 
 
         //prepar for next loop
-        TOTALMONTHLY +=FULL //add payment to total paymnets
+    
         TOTALINT=Math.round(TOTALINT+PAYMENT)
         TIMER +=1 //add 1 to TIMER to increment month
     }
