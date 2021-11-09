@@ -33,10 +33,10 @@
 //Calculation Loop//
     while (TIMER!=MONTHS+1)
     { //while the currentmonth [TIMER] does not equal the total number of months [MONTHS], do the loop (a 1 is added so that month 1 = 1 and not 0)
-    
+        if (TIMER==MONTHS) {PRINC=DEBT}; //if its the last month make princ the total debt
         PAYMENT = Math.round((DEBT*APR/12)); //calculate new intrest amount
         YEAR = Math.ceil(TIMER/12);    //Current year by taking current month [TIMER] div by 12
-        if (DEBT<PRINC) {PRINC=DEBT}; //if your debt is less than the principle, change princ val to debt value
+
         FULL = Math.round(PAYMENT+PRINC);  //calculate total payment
         DEBT=Math.round(DEBT-PRINC);   //calulate new debt by subtracting principal payment from debt
         GRANDTOTAL +=FULL //add payment to total paymnets
