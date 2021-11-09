@@ -50,5 +50,5 @@ button {
     background-color:rgb(118, 209, 197);
     font-size: 20px;
     padding: 10px 50px;
-    overflow-y:scroll; /*allows scrolling when too much text*/
+    overflow:scroll; /*allows scrolling when too much text*/
 }

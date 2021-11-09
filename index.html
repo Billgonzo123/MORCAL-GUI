@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>MORCAL-GUI</title>
 </head>
+
 <body>
-<header>
-    <h1>Monthly Mortgage Calculator</h1>
-</header>
-<section id="content">
-<form class="input-form">
-<!-- input for APR -->
-    <lable for = "APR">Input Fixed APR (1%=.01): </lable>
-    <input type="number" step="0.001" placeholder="" name="APR"/>
+    <header>
+        <h1>Monthly Mortgage Calculator</h1>
+    </header>
+    <section id="content">
+        <form class="input-form">
+            <!-- input for APR -->
+            <lable for="APR">Input Fixed APR (1%=.01): </lable>
+            <input type="number" step="0.001" placeholder="" name="APR" />
 
-<!-- input for DEBT -->
-    <lable for="DEBT"> Input Total Debt: </lable>
-    <input type="number" placeholder="" name="DEBT"/>
+            <!-- input for DEBT -->
+            <lable for="DEBT"> Input Total Debt: </lable>
+            <input type="number" placeholder="" name="DEBT" />
 
-<!-- input for YEARS -->
-    <lable for="YEARS">Input Years to Pay Off: </lable>
-    <input type="number" placeholder="" name="YEARS"/>
-
-
-</form>
-<button id="CAL" onmousedown="BUTTON_CLICK()" onmouseup="RUN_CAL()">Calculate</button>
+            <!-- input for YEARS -->
+            <lable for="YEARS">Input Years to Pay Off: </lable>
+            <input type="number" placeholder="" name="YEARS" />
 
 
-<p id="results">Results Will Appear Here</p>
+        </form>
+        <!--Use onpointerdown so that it is compatible with mobile touch screens-->
+        <button id="CAL" onpointerdown="BUTTON_CLICK()" onpointerup="RUN_CAL()">Calculate</button>
 
-</section>
-<script type="text/javascript" src="./assets/js/script.js"></script>
+
+        <p id="results">Results Will Appear Here</p>
+
+    </section>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
+
 </html>
