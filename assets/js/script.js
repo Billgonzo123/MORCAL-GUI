@@ -28,7 +28,9 @@
 
     result.innerHTML="";//clear the results elelment
 
-    result.innerHTML += '--------------------<br>'+YEARS+' Year Fixed Mortgage at '+(APR*100).toPrecision(5)+'% APR<br>Total Debt: $'+DEBT+'<br>Principal Monthly Payment: $'+PRINC+'<br>--------------------<br>'; //.toPrecision() sets the number of dec points to display
+
+    //you can use ${var} to insert variables into a string
+    result.textContent += '--------------------\r\n'+YEARS+' Year Fixed Mortgage at '+(APR*100).toPrecision(5)+'% APR\r\nTotal Debt: $'+DEBT+'\r\nPrincipal Monthly Payment: $'+PRINC+'\r\n--------------------\r\n'; //.toPrecision() sets the number of dec points to display
     
 //Calculation Loop//
     while (TIMER!=MONTHS+1)
@@ -42,15 +44,15 @@
         GRANDTOTAL +=FULL //add payment to total paymnets
 
         //Print Results
-        result.innerHTML +=  '<br>Year: '+ YEAR;
-        result.innerHTML +=  '<br>Month: '+ (TIMER-(12*YEAR)+12); //calculates the month of year based
-        result.innerHTML +=  '<br>Intrest: $'+ PAYMENT;
-        result.innerHTML +=  '<br>Principle: $'+ PRINC;
-        result.innerHTML +=  '<br>Total Payment: $'+ FULL;
-        result.innerHTML +=  '<br>Remaining Debt: $'+  DEBT;
-        result.innerHTML +=  '<br>Total Months: '+ TIMER;
-        result.innerHTML +=  '<br>Grand Total: '+ GRANDTOTAL;
-        result.innerHTML +=  '<br>------------------------';
+        result.textContent  +=  '\r\n Year: '+ YEAR;
+        result.textContent  +=  '\r\n Month: '+ (TIMER-(12*YEAR)+12); //calculates the month of year based off totsl month and years
+        result.textContent  +=  '\r\n Intrest: $'+ PAYMENT;
+        result.textContent  +=  '\r\n Principle: $'+ PRINC;
+        result.textContent  +=  '\r\n Total Payment: $'+ FULL;
+        result.textContent  +=  '\r\n Remaining Debt: $'+  DEBT;
+        result.textContent  +=  '\r\n Total Months: '+ TIMER;
+        result.textContent  +=  '\r\n Grand Total: '+ GRANDTOTAL;
+        result.textContent  +=  '\r\n ------------------------';
 
 
         //prepar for next loop

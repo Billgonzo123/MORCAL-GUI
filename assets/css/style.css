@@ -42,6 +42,7 @@ button {
 }
 
 #results {
+    white-space: pre; /*this is needed so that /r/n will make a new line*/
     position:relative;
     transform: translateX(-50%); /*sets x position to center*/
     border:black solid 5px;
